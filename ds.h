@@ -1,12 +1,26 @@
 template <class T>
-
-class node
+class knode
 {
 public:
     T *item;
-    node *next;
+    knode *next;
 
-    node();
-    ~node();
+    knode();
+    ~knode();
 
+};
+
+template <class T>
+class kstack
+{
+private:
+    knode<T> *top;
+public:
+    kstack();
+    ~kstack();
+
+    void push(knode<T> *);
+    knode<T> * pop();
+    bool isEmpty();
+    //bool isFull();
 };
