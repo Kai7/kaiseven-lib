@@ -24,3 +24,14 @@ public:
     bool isEmpty();
     //bool isFull();
 };
+
+template <class T>
+class kqueue
+{
+private:
+    knode<T> *front;
+    knode<T> *rear;
+public:
+    kqueue();
+    ~kqueue();
+}
